@@ -31,7 +31,6 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(req ->
                         req.requestMatchers(WHITE_LIST_URL)
                                 .permitAll()
-                                .requestMatchers("/api/v1/auth/**").hasAnyRole(String.valueOf(Role.USER))
                                 .anyRequest()
                                 .authenticated()
                 )
